@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub URL Shortener</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f4f4f4; }
+        .container { text-align: center; padding: 20px; background-color: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.1); border-radius: 5px; }
+        input[type="text"] { width: 80%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
+        button { padding: 10px 20px; background-color: #28a745; color: #fff; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background-color: #218838; }
+        .result { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>GitHub URL Shortener</h1>
+        <input type="text" id="longUrl" placeholder="Enter your long URL here">
+        <button onclick="shortenUrl()">Shorten URL</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function shortenUrl() {
+            const longUrl = document.getElementById('longUrl').value;
+            if (!longUrl) {
+                alert("Please enter a valid URL");
+                return;
+            }
+            
+            // Simple URL modifier
+            const urlBase = "https://sebastian.github.io/";
+            const encodedUrl = btoa(longUrl); // Base64 encode the URL
+            const shortUrl = `${urlBase}${encodedUrl}`;
+
+            // Display the result
+            document.getElementById('result').innerHTML = `
+                <p>Shortened URL: <a href="${shortUrl}" target="_blank">${shortUrl}</a></p>
+            `;
+        }
+    </script>
+</body>
+</html>
