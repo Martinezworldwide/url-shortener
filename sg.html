@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting to Soccer Garage...</title>
     <script>
-        // Automatically open the link in a new tab after a brief delay
-        function openInNewTab() {
-            window.open('https://sovrn.co/5abl8yk', '_blank');
-            window.location.href = 'https://sovrn.co/5abl8yk'; // Fallback for current tab
+        function redirect() {
+            // Attempt to open in a new tab
+            const newTab = window.open('https://sovrn.co/5abl8yk', '_blank');
+
+            // If the browser blocks the pop-up, fallback to same-tab redirection
+            if (!newTab || newTab.closed || typeof newTab.closed == 'undefined') {
+                window.location.href = 'https://sovrn.co/5abl8yk';
+            }
         }
 
-        // Trigger the function after a short delay
-        setTimeout(openInNewTab, 1000); // 1-second delay
+        // Call redirect immediately
+        window.onload = redirect;
     </script>
 </head>
 <body>
