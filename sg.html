@@ -6,16 +6,11 @@
     <title>Redirecting to Soccer Garage...</title>
     <script>
         function redirect() {
-            // Attempt to open in a new tab
-            const newTab = window.open('https://sovrn.co/5abl8yk', '_blank');
-
-            // If the browser blocks the pop-up, fallback to same-tab redirection
-            if (!newTab || newTab.closed || typeof newTab.closed == 'undefined') {
-                window.location.href = 'https://sovrn.co/5abl8yk';
-            }
+            // Redirect to the URL in the same tab
+            window.location.href = 'https://sovrn.co/5abl8yk';
         }
 
-        // Call redirect immediately
+        // Trigger redirect immediately upon page load
         window.onload = redirect;
     </script>
 </head>
@@ -23,3 +18,4 @@
     <p>Redirecting to <a href="https://sovrn.co/5abl8yk">Soccer Garage</a>...</p>
 </body>
 </html>
+
