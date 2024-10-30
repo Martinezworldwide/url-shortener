@@ -8,5 +8,7 @@ US Soccer Store: https://martinezworldwide.github.io/url-shortener/uss.html
 Soccer.com: https://martinezworldwide.github.io/url-shortener/sc.html
 World Soccer Shop: https://martinezworldwide.github.io/url-shortener/wss.html
 Moreland Universite: https://martinezworldwide.github.io/url-shortener/education/morelanduniversity.html
+Denver College of Nursing: https://martinezworldwide.github.io/url-shortener/education/denvercollegeofnursing
+
 
 
